@@ -7,7 +7,7 @@ provider "openstack" {
   user_name   = var.username
   tenant_name = var.tenantName
   password    = var.password
-  auth_url    = "http://45.153.243.250:5000/v2.0"
+  auth_url    = "http://45.153.243.250:5000/v3"
   region      = "var.region"
 }
 
