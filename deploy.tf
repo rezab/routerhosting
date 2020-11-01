@@ -16,7 +16,7 @@ variable "imageId" {}
 variable "flavorId" {}
 variable "networkId" {}
 
-resource "openstack_compute_instance_v2" "test-server" {
+resource "openstack_compute_instance_v2" "Test-Terraform" {
   name      = var.instanceName
   region    = var.region
   flavor_id = var.flavorId
