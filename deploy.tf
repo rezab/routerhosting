@@ -8,7 +8,7 @@ provider "openstack" {
   tenant_name = var.tenantName
   password    = var.password
   auth_url    = "http://45.153.243.250:5000/v3"
-  region      = "var.region"
+  region      = var.region
 }
 
 variable "instanceName" {}
@@ -17,7 +17,7 @@ variable "flavorId" {}
 variable "networkId" {}
 
 resource "openstack_compute_instance_v2" "basic" {
-  name            = "basic"
+  name            = var.instanceName
   image_id        = var.imageId
   flavor_id       = var.flavorId
   security_groups = ["default"]
