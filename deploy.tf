@@ -17,7 +17,7 @@ variable "flavorId" {}
 variable "networkId" {}
 
 resource "openstack_compute_instance_v2" "basic" {
-  name            = var.instanceName
+  name            = "Terraform2"
   image_id        = var.imageId
   flavor_id       = var.flavorId
   security_groups = ["default"]
